@@ -1,0 +1,84 @@
+@import "styles/const/_media.scss";
+
+Controller,
+OfficeMap,
+DadataFIO {
+    margin-bottom: 20px;
+}
+
+Controller {
+    &[name="creditTotalAmount"],
+    &[name="monthlyPayment"] {
+        pointer-events: none;
+    }
+}
+
+form {
+    width: 100%;
+}
+
+ResendButton {
+    margin-bottom: 20px;
+}
+
+textWrapper {
+    margin-bottom: 20px;
+}
+
+FormCheckbox {
+    margin-bottom: 20px;
+
+    &[name="insurance"] {
+        margin: 20px 0;
+    }
+}
+
+Typography {
+    &[variant="p"][use|helperText] {
+        margin-top: 12px;
+        margin-bottom: 20px;
+        font-size: 18px;
+
+        @include for-desktop {
+            margin-top: 24px;
+            font-size: 20px;
+        }
+    }
+
+    &[variant="span"] {
+        font-size: 12px;
+
+        &[use|confirmation] {
+            font-size: 12px;
+        }
+    }
+
+    &[use|header] {
+        text-align: center;
+    }
+
+    &[variant="p"] {
+        margin-right: 24px;
+        margin-bottom: 0;
+    }
+
+    [variant="h2"] {
+        margin-bottom: 24px;
+    }
+}
+
+descriptionWrapper {
+    margin-bottom: 20px;
+
+    @include for-tablet {
+        margin-bottom: 0;
+    }
+}
+
+ButtonGroup {
+    flex-direction: column-reverse;
+
+    @include for-mobile {
+        flex-direction: row;
+    }
+}
